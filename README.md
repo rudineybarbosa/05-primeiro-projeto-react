@@ -1,6 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Studying a litle more about React.
 
-## Available Scripts
+## Techs and packages envolved
+  **React
+  
+  **TypeScript
+  
+  **React-router-dom
+  
+  
+## After checkout this repository, we can use available script below
 
 In the project directory, you can run:
 
