@@ -1,8 +1,8 @@
 # Studying a litle more about React.
 
 ## Techs and packages envolved
-  **React;
-  TypeScript;
+  **React;  
+  TypeScript;  
   React-router-dom**
   
   
