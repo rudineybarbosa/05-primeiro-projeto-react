@@ -1,11 +1,9 @@
 # Studying a litle more about React.
 
 ## Techs and packages envolved
-  **React
-  
-  **TypeScript
-  
-  **React-router-dom
+  **React;
+  TypeScript;
+  React-router-dom**
   
   
 ## After checkout this repository, we can use available script below
