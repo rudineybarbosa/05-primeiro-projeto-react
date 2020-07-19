@@ -11,9 +11,10 @@ import React from 'react';
     const Dashboard:TypeOfDashboard = () {...}
 
 */
+import { Title } from './style';
 
 const Dashboard: React.FC = () => {
-  return <h1>Dashboard</h1>;
+  return <Title>Explore Respositórios no Github</Title>;
 };
 
 export default Dashboard;
