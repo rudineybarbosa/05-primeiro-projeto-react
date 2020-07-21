@@ -41,6 +41,32 @@ const Dashboard: React.FC = () => {
           {/* This arrow is an SVG */}
           <FiChevronRight size={20} />
         </a>
+        <a href="teste">
+          <img
+            src="https://avatars1.githubusercontent.com/u/29411015?s=460&u=d964259f6195bc975f1cbed2b2cce435cc2bcbbc&v=4"
+            alt="Rudiney Barbosa"
+          />
+          <div>
+            <strong>rudineybarbosa/repositoryManagement</strong>
+            <p>Little project to study Node and ReactJS</p>
+          </div>
+
+          {/* This arrow is an SVG */}
+          <FiChevronRight size={20} />
+        </a>
+        <a href="teste">
+          <img
+            src="https://avatars1.githubusercontent.com/u/29411015?s=460&u=d964259f6195bc975f1cbed2b2cce435cc2bcbbc&v=4"
+            alt="Rudiney Barbosa"
+          />
+          <div>
+            <strong>rudineybarbosa/repositoryManagement</strong>
+            <p>Little project to study Node and ReactJS</p>
+          </div>
+
+          {/* This arrow is an SVG */}
+          <FiChevronRight size={20} />
+        </a>
       </DivRepositoriesStyled>
     </>
   );
