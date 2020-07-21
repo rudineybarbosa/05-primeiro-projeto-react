@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import gitHubBackground from '../assets/github-background.svg';
 
+// THIS IS NOT A CONSTANT REFERENCING ANY HTML TAG
 export default createGlobalStyle`
   * {
     margin: 0;
