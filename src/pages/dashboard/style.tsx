@@ -21,7 +21,7 @@ export const FormStyled = styled.form`
     height: 70px;
     padding: 0px 20px;
     border: 0;
-    border-radius: 50px 0 0 50px;
+    border-radius: 5px 0 0 5px;
     color: #3a3a3a;
 
     &:placeholder {
@@ -51,7 +51,7 @@ export const DivRepositoriesStyled = styled.div`
 
   a {
     background: #fff;
-    border-radius: 0px 50px 50px 0px;
+    border-radius: 50px 50px 50px 50px;
     width: 100%;
     padding: 24px;
     text-decoration: none;
@@ -63,6 +63,7 @@ export const DivRepositoriesStyled = styled.div`
     &:hover {
       transform: translateX(10px);
     }
+
     img {
       border-radius: 50%;
       width: 64px;
@@ -87,6 +88,10 @@ export const DivRepositoriesStyled = styled.div`
     svg {
       margin-left: auto;
       color: #cbcbd6;
+    }
+
+    & + a {
+      margin-top: 16px;
     }
   }
 `;
