@@ -59,10 +59,10 @@ export const DivRepositoriesStyled = styled.div`
     display: flex;
     align-items: center;
 
-    transition: transform 0.2s;
     &:hover {
       transform: translateX(10px);
     }
+    transition: transform 0.2s;
 
     img {
       border-radius: 50%;
@@ -71,7 +71,7 @@ export const DivRepositoriesStyled = styled.div`
     }
 
     div {
-      margin-left: 16px;
+      margin: 0px 16px;
 
       strong {
         font-size: 20px;
@@ -85,6 +85,7 @@ export const DivRepositoriesStyled = styled.div`
       }
     }
 
+    /* This is the arrow SVG icon FiChevronRight */
     svg {
       margin-left: auto;
       color: #cbcbd6;

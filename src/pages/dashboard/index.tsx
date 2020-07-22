@@ -1,5 +1,10 @@
-import React from 'react';
+/* eslint-disable camelcase */
+import React, { useState, FormEvent } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
+import api from '../../services/api';
+import logo from '../../assets/logo.svg';
+
+import { TitleStyled, FormStyled, DivRepositoriesStyled } from './style';
 /* Options to decare a new function:
 
   1. const Dashboard = () => {...}
@@ -11,62 +16,64 @@ import { FiChevronRight } from 'react-icons/fi';
     const Dashboard:TypeOfDashboard = () {...}
 
 */
-
-import logo from '../../assets/logo.svg';
-
-import { TitleStyled, FormStyled, DivRepositoriesStyled } from './style';
+interface Repository {
+  full_name: string;
+  description: string;
+  owner: {
+    login: string;
+    avatar_url: string;
+  };
+}
 
 const Dashboard: React.FC = () => {
+  const [repositories, setRepositories] = useState<Repository[]>([]);
+
+  const [newRepository, setNewRepository] = useState('');
+
+  async function handleAddRepository(
+    event: FormEvent<HTMLFormElement>,
+  ): Promise<void> {
+    event.preventDefault();
+
+    const response = await api.get<Repository>(`repos/${newRepository}`);
+
+    const repository = response.data;
+
+    setRepositories([...repositories, repository]);
+
+    setNewRepository('');
+  }
+
   return (
     <>
       <img src={logo} alt="Githu explorer" />
       <TitleStyled>Explore Respositórios no Github</TitleStyled>
 
-      <FormStyled>
-        <input placeholder="Digite o nome do Repositório" />
+      <FormStyled onSubmit={handleAddRepository}>
+        <input
+          value={newRepository}
+          onChange={e => setNewRepository(e.target.value)}
+          placeholder="Digite o nome do Repositório"
+        />
         <button type="submit">Pesquisar</button>
       </FormStyled>
 
       <DivRepositoriesStyled>
-        <a href="teste">
-          <img
-            src="https://avatars1.githubusercontent.com/u/29411015?s=460&u=d964259f6195bc975f1cbed2b2cce435cc2bcbbc&v=4"
-            alt="Rudiney Barbosa"
-          />
-          <div>
-            <strong>rudineybarbosa/repositoryManagement</strong>
-            <p>Little project to study Node and ReactJS</p>
-          </div>
+        {repositories.map(repository => (
+          <a key={repository.full_name} href="teste">
+            <img
+              src={repository.owner.avatar_url}
+              alt={repository.owner.login}
+            />
+            <div>
+              <strong>{repository.full_name}</strong>
+              <p>{repository.description}</p>
+            </div>
 
-          {/* This arrow is an SVG */}
-          <FiChevronRight size={20} />
-        </a>
-        <a href="teste">
-          <img
-            src="https://avatars1.githubusercontent.com/u/29411015?s=460&u=d964259f6195bc975f1cbed2b2cce435cc2bcbbc&v=4"
-            alt="Rudiney Barbosa"
-          />
-          <div>
-            <strong>rudineybarbosa/repositoryManagement</strong>
-            <p>Little project to study Node and ReactJS</p>
-          </div>
-
-          {/* This arrow is an SVG */}
-          <FiChevronRight size={20} />
-        </a>
-        <a href="teste">
-          <img
-            src="https://avatars1.githubusercontent.com/u/29411015?s=460&u=d964259f6195bc975f1cbed2b2cce435cc2bcbbc&v=4"
-            alt="Rudiney Barbosa"
-          />
-          <div>
-            <strong>rudineybarbosa/repositoryManagement</strong>
-            <p>Little project to study Node and ReactJS</p>
-          </div>
-
-          {/* This arrow is an SVG */}
-          <FiChevronRight size={20} />
-        </a>
+            {/* The arrow is an SVG */}
+            <FiChevronRight size={20} />
+          </a>
+        ))}
       </DivRepositoriesStyled>
     </>
   );
