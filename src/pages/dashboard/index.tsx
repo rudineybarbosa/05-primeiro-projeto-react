@@ -1,10 +1,16 @@
 /* eslint-disable camelcase */
+
 import React, { useState, FormEvent } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 import api from '../../services/api';
 import logo from '../../assets/logo.svg';
 
-import { TitleStyled, FormStyled, DivRepositoriesStyled } from './style';
+import {
+  TitleStyled,
+  FormStyled,
+  DivRepositoriesStyled,
+  ErrorStyled,
+} from './style';
 /* Options to decare a new function:
 
   1. const Dashboard = () => {...}
@@ -30,18 +36,33 @@ const Dashboard: React.FC = () => {
 
   const [newRepository, setNewRepository] = useState('');
 
+  const [inputError, setInputError] = useState('');
+
   async function handleAddRepository(
     event: FormEvent<HTMLFormElement>,
   ): Promise<void> {
     event.preventDefault();
 
-    const response = await api.get<Repository>(`repos/${newRepository}`);
+    if (!newRepository) {
+      setInputError('Digite o nome do autor/nome do repositório');
 
-    const repository = response.data;
+      return;
+    }
 
-    setRepositories([...repositories, repository]);
+    try {
+      const response = await api.get<Repository>(`repos/${newRepository}`);
 
-    setNewRepository('');
+      const repository = response.data;
+
+      setRepositories([...repositories, repository]);
+
+      setNewRepository('');
+      setInputError('');
+    } catch (error) {
+      setInputError('Nome do autor e/ou repositório inválidos');
+
+      setNewRepository('');
+    }
   }
 
   return (
@@ -57,6 +78,7 @@ const Dashboard: React.FC = () => {
         />
         <button type="submit">Pesquisar</button>
       </FormStyled>
+      {inputError && <ErrorStyled>{inputError}</ErrorStyled>}
 
       <DivRepositoriesStyled>
         {repositories.map(repository => (

@@ -45,6 +45,12 @@ export const FormStyled = styled.form`
   }
 `;
 
+export const ErrorStyled = styled.span`
+  display: block;
+  color: #c53030;
+  margin-top: 8px;
+`;
+
 export const DivRepositoriesStyled = styled.div`
   margin-top: 80px;
   max-width: 700px;
