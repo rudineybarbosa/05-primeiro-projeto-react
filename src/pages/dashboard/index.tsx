@@ -57,6 +57,7 @@ const Dashboard: React.FC = () => {
       setRepositories([...repositories, repository]);
 
       setNewRepository('');
+
       setInputError('');
     } catch (error) {
       setInputError('Nome do autor e/ou repositório inválidos');
@@ -70,7 +71,7 @@ const Dashboard: React.FC = () => {
       <img src={logo} alt="Githu explorer" />
       <TitleStyled>Explore Respositórios no Github</TitleStyled>
 
-      <FormStyled onSubmit={handleAddRepository}>
+      <FormStyled hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
           value={newRepository}
           onChange={e => setNewRepository(e.target.value)}
