@@ -2,6 +2,7 @@
 
 import React, { useState, FormEvent, useEffect } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import logo from '../../assets/logo.svg';
 
@@ -14,7 +15,7 @@ import {
 /* Options to decare a new function:
 
   1. const Dashboard = () => {...}
-  2. function Daschboard () {...}
+  2. function Dasshboard () {...}
 
   Both are the same declaration.
   We will choose the first one because it is more easy to apply types, as we are using TypeScript. To do so, we just need to write the type after the name. Exemple:
@@ -99,7 +100,10 @@ const Dashboard: React.FC = () => {
 
       <DivRepositoriesStyled>
         {repositories.map(repository => (
-          <a key={repository.full_name} href="teste">
+          <Link
+            key={repository.full_name}
+            to={`/repositories/${repository.full_name}`}
+          >
             <img
               src={repository.owner.avatar_url}
               alt={repository.owner.login}
@@ -111,7 +115,7 @@ const Dashboard: React.FC = () => {
 
             {/* The arrow is an SVG */}
             <FiChevronRight size={20} />
-          </a>
+          </Link>
         ))}
       </DivRepositoriesStyled>
     </>
