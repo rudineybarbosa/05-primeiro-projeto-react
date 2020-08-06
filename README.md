@@ -22,9 +22,6 @@ You need to have Git and Yarn (package manager) before start:
 
 [Git](https://git-scm.com), [Yarn](https://classic.yarnpkg.com/en/docs/install).
 
-<h1 align="center">
-  <img alt="Dashboard" title="#dashboard" src="./app_screenshots/dashboard.png" />
-</h1>
 
 ### 🎲 Running
 
@@ -54,3 +51,14 @@ Click on selected repository to see its issues.
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+```
+Imagens
+Dashboard
+<h1 align="center">
+  <img alt="Dashboard" title="#dashboard" src="./app_screenshots/dashboard.png" />
+</h1>
+
+Issues List
+<h1 align="center">
+  <img alt="Dashboard" title="#dashboard" src="./app_screenshots/issues.png" />
+</h1>
