@@ -3,17 +3,13 @@
 ## Studyng React and Styled Components while consulting Github API.
 
 ## Techs and packages envolved
-  React;  
+- [React](https://pt-br.reactjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
+- [React Icons](https://github.com/react-icons/react-icons)
+- [Polished](https://polished.js.org/docs/)
   
-  Styled Components;
-  
-  TypeScript;  
-  
-  React-router-dom;
-  
-  React-icons;
-  
-  Polished;
     
 
 ### Pré-requisitos
