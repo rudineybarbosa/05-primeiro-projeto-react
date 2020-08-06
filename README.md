@@ -52,13 +52,16 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 ```
-Imagens
-Dashboard
+### Imagens
+
+Dashboard:
+
 <h1 align="center">
   <img alt="Dashboard" title="#dashboard" src="./app_screenshots/dashboard.png" />
 </h1>
 
-Issues List
+Issues List:
+
 <h1 align="center">
   <img alt="Dashboard" title="#dashboard" src="./app_screenshots/issues.png" />
 </h1>
