@@ -1,4 +1,5 @@
-# Studying a litle more about React.
+# Learning litle more about React.
+
 ## Studyng React and Styled Components while consulting Github API.
 
 ## Techs and packages envolved
@@ -21,8 +22,11 @@ You need to have Git and Yarn (package manager) before start:
 
 [Git](https://git-scm.com), [Yarn](https://classic.yarnpkg.com/en/docs/install).
 
+<h1 align="center">
+  <img alt="Dashboard" title="#dashboard" src="./app_screenshots/dashboard.png" />
+</h1>
 
-### 🎲 Rodando o Back End (servidor)
+### 🎲 Running
 
 ```bash
 # Clone this repository
@@ -32,17 +36,18 @@ $ git clone <https://github.com/rudineybarbosa/05-primeiro-projeto-react.git>
 $ cd 05-primeiro-projeto-react  
 ## After checkout this repository, we can use available script below
 
-In the project directory, you can run:
+In the project directory, you need install project dependencies with command:
 
 ### `yarn install`
 
-Install project dependencies.
+Runs the app<br />:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Try search for any repository on Github like 'facebook/react' or 'facebook/react-native'...
+Click on selected repository to see its issues.
 
 ## Learn More
 
