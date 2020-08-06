@@ -37,7 +37,7 @@ In the project directory, you need install project dependencies with command:
 
 ### `yarn install`
 
-Runs the app<br />:
+Runs the app:
 
 ### `yarn start`
 
