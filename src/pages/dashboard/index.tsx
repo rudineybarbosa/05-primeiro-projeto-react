@@ -96,6 +96,7 @@ const Dashboard: React.FC = () => {
         />
         <button type="submit">Pesquisar</button>
       </FormStyled>
+
       {inputError && <ErrorStyled>{inputError}</ErrorStyled>}
 
       <DivRepositoriesStyled>

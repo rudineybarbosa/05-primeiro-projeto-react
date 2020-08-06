@@ -22,7 +22,7 @@ export const HeaderPage = styled.header`
   }
 `;
 
-export const SectionRespositoryInfo = styled.section`
+export const SectionRepositoryInfo = styled.section`
   margin-top: 80px;
   display: flex;
   align-items: center;
