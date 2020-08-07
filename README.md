@@ -9,7 +9,6 @@
 - [React Router DOM](https://reactrouter.com/web/guides/quick-start)
 - [React Icons](https://github.com/react-icons/react-icons)
 - [Polished](https://polished.js.org/docs/)
-  
     
 
 ### Pré-requisitos
@@ -61,3 +60,5 @@ Issues List:
 <h1 align="center">
   <img alt="Dashboard" title="#dashboard" src="./app_screenshots/issues.png" />
 </h1>
+
+Reference: Rocketseat - Nível 03 - Primeiro projeto com React
